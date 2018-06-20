@@ -2,17 +2,23 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div>
+<p>
+<img width="450" align="right" src="images/vlt_milky_way.jpg">
+I'm an Astrophysics PhD student at the Royal Observatory Edinburgh working on galaxy evolution, in particular the star-formation histories of quiescent galaxies. My research involves applying techniques from the field of data science to large and noisy astronomical datasets. In particular I am interested in Bayesian statistical methods (e.g. nested sampling), machine learning and numerical optimisation. 
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+</p>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+<p>
+I work with data from telescopes across the world and in space. I am a core member of <a href="http://vandels.inaf.it">VANDELS</a>, a large European Southern Observatory public survey on the Very Large Telescope in Chile. I am supervised by Professors Ross McLure and James Dunlop.
+</p>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<p>
+
+</p>
+
+<p>
+I recently published Bayesian Analysis of Galaxies for Physical Inference and Parameter EStimation, or BAGPIPES, a Python tool for generating complex model galaxy spectra and fitting these to spectroscopic and photometric observational data. You can download the code and read the documentation at  <a href="https://bagpipes.readthedocs.io">https://bagpipes.readthedocs.io</a>, or view the source code and examples at <a href="https://github.com/ACCarnall/bagpipes">https://www.github.com/ACCarnall/bagpipes</a>
+</p>
+
 </div>

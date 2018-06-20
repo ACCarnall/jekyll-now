@@ -19,13 +19,14 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 16px/1.4 $helveticaNeue;
   color: $darkGray;
+
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 980px;
   padding: 0 10px;
   width: 100%;
 }
@@ -65,7 +66,8 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 0 0 25px 0;
+  text-align: justify;
 }
 
 a {
@@ -108,6 +110,10 @@ strong, b {
 
 img {
   max-width: 100%;
+  margin: 0 0 0 20px;
+  border-radius: 5px;
+
+
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -165,8 +171,8 @@ img {
 
 .site-avatar {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 132px;
+  height: 132px;
   margin-right: 15px;
 
   @include mobile {
@@ -176,7 +182,7 @@ img {
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 75px;
   }
 }
 
@@ -191,7 +197,7 @@ img {
 }
 
 .site-name {
-  margin: 0;
+  margin: 0 0 0 20px;
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
@@ -201,9 +207,10 @@ img {
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 16px 0 0 20px;
   color: $gray;
   font-size: 16px;
+  letter-spacing: 0.4px;
 
   @include mobile {
     margin: 3px 0;
@@ -211,8 +218,8 @@ img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  float: left;
+  margin-top: 20px; //
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -287,3 +294,31 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
