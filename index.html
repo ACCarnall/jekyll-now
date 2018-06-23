@@ -5,20 +5,34 @@ layout: default
 <div>
 <p>
 <img width="450" align="right" src="images/vlt_milky_way.jpg">
-I'm an Astrophysics PhD student at the Royal Observatory Edinburgh working on galaxy evolution, in particular the star-formation histories of quiescent galaxies. My research involves applying techniques from the field of data science to large and noisy astronomical datasets. In particular I am interested in Bayesian statistical methods (e.g. nested sampling), machine learning and numerical optimisation. 
-
+My research brings together cutting-edge techniques from the fields of astronomy, statistics and data science in order to understand the evolution of galaxies across cosmic time.
 </p>
 
 <p>
-I work with data from telescopes across the world and in space. I am a core member of <a href="http://vandels.inaf.it">VANDELS</a>, a large European Southern Observatory public survey on the Very Large Telescope in Chile. I am supervised by Professors Ross McLure and James Dunlop.
+I work with data from world-class telescopes across the globe and in space. I am a core member of <a href="http://vandels.inaf.it">VANDELS</a>, a large European Southern Observatory Public Survey on the Very Large Telescope at Paranal Observatory in Chile.
 </p>
 
 <p>
-
+I also develop astronomical software, most notably <a href="https://bagpipes.readthedocs.io">BAGPIPES</a>, a Python tool for generating model galaxy spectra and fitting these to spectroscopic and photometric observational data.
 </p>
 
-<p>
-I recently published Bayesian Analysis of Galaxies for Physical Inference and Parameter EStimation, or BAGPIPES, a Python tool for generating complex model galaxy spectra and fitting these to spectroscopic and photometric observational data. You can download the code and read the documentation at  <a href="https://bagpipes.readthedocs.io">https://bagpipes.readthedocs.io</a>, or view the source code and examples at <a href="https://github.com/ACCarnall/bagpipes">https://www.github.com/ACCarnall/bagpipes</a>
-</p>
+</div>
 
+<br>
+
+<div class="posts">
+  <h2> Recent News:</h2>
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+      <br>
+      <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> - {{ post.date | date: "%B %e, %Y" }} </p>
+
+    </article>
+  {% endfor %}
 </div>
