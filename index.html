@@ -16,23 +16,94 @@ I work with data from world-class telescopes across the globe and in space. I am
 I also develop astronomical software, most notably <a href="https://bagpipes.readthedocs.io">BAGPIPES</a>, a Python tool for generating model galaxy spectra and fitting these to spectroscopic and photometric observational data.
 </p>
 
+<p>
+When I'm not at work I love travelling and spending time outdoors. I'm currently working on <a href="https://www.walkhighlands.co.uk/Forum/memberlist.php?mode=viewmap&u=81733">climbing all 282 Scottish Munros</a> (mountains over 3000 feet). Some of the photos I've taken on my travels are shown below.
+</p>
+
 </div>
 
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 7</div>
+  <img style="margin:0px" src="images/IMG_7115.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 7</div>
+  <img style="margin:0px" src="images/IMG_8302.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 7</div>
+  <img style="margin:0px" src="images/IMG_3086.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 7</div>
+  <img style="margin:0px" src="images/IMG_5744.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 7</div>
+  <img style="margin:0px" src="images/IMG_8442.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 7</div>
+  <img style="margin:0px" src="images/IMG_6048.jpg">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 7</div>
+  <img style="margin:0px" src="images/IMG_8564.jpg">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
 <br>
 
-<div class="posts">
-  <h2> Recent News:</h2>
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-      <br>
-      <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> - {{ post.date | date: "%B %e, %Y" }} </p>
-
-    </article>
-  {% endfor %}
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
 </div>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
