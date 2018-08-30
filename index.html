@@ -13,7 +13,7 @@ I work with data from world-class telescopes across the globe and in space. I am
 </p>
 
 <p>
-I also develop astronomical software, most notably <a href="https://bagpipes.readthedocs.io">BAGPIPES</a>, a Python tool for generating model galaxy spectra and fitting these to spectroscopic and photometric observational data.
+I also develop astronomical software, most notably <a href="https://bagpipes.readthedocs.io">BAGPIPES</a>, a Python tool for generating complex model galaxy spectra and fitting these to both spectroscopic and photometric observational data.
 </p>
 
 <p>
@@ -21,7 +21,6 @@ When I'm not at work I enjoy travelling and spending time outdoors. I'm currentl
 </p>
 
 </div>
-
 
 <div class="slideshow-container">
 
@@ -74,16 +73,14 @@ When I'm not at work I enjoy travelling and spending time outdoors. I'm currentl
 <br>
 
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span> 
-  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
 </div>
-
-
 
 <script>
 var slideIndex = 1;
@@ -101,16 +98,15 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 </script>
-
