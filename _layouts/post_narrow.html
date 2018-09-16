@@ -3,15 +3,17 @@ layout: default
 ---
 
 <article class="post">
+  <div class="homepage">
   <h4>{{ page.title }}</h4>
 
   <div class="entry">
     {{ content }}
   </div>
-
+  <p></p>
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
-  
+
   {% include disqus.html %}
+</div>
 </article>

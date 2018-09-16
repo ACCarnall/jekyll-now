@@ -1,16 +1,11 @@
 ---
-layout: post
-title: The SpectRes spectral resampling code is now public!
-excerpt: <p><img width="500" align="right" src="images/spectres.png">When I started my PhD I quickly came up against the problem of resampling spectra and their associated uncertainties onto different sets of wavelength values. It turns out there were a lot of other people in astronomy <a href="http://www.astrobetter.com/blog/2013/08/12/python-tip-re-sampling-spectra-with-pysynphot/">looking for an answer to the same problem</a>, so I decided to write my own bit of code that would allow people to do this easily.</p>
+layout: post_narrow
+title: SpectRes - simple spectral resampling in Python.
+excerpt: When I started my PhD I quickly came up against the problem of resampling spectra and their associated uncertainties onto different sets of wavelength values. It turns out there were a lot of other people in astronomy <a href="http://www.astrobetter.com/blog/2013/08/12/python-tip-re-sampling-spectra-with-pysynphot/">looking for an answer to the same problem</a>, so I decided to write and publish SpectRes, a Python function for spectral resampling.</p>
 ---
 
 <p>
-<img width="500" align="right" src="../images/spectres.png">
-When I started my PhD I quickly came up against the problem of resampling spectra and their associated uncertainties onto different sets of wavelength values. It turns out there were a lot of other people in astronomy <a href="http://www.astrobetter.com/blog/2013/08/12/python-tip-re-sampling-spectra-with-pysynphot/">looking for an answer to the same problem</a>, so I decided to write my own bit of code that would allow people to do this easily. 
-</p>
-
-<p>
-SpectRes is a Python function which efficiently resamples spectra and their associated uncertainties onto an arbitrary wavelength grid. 
+When I started my PhD I quickly came up against the problem of resampling spectra and their associated uncertainties onto different sets of wavelength values. It turns out there were a lot of other people in astronomy <a href="http://www.astrobetter.com/blog/2013/08/12/python-tip-re-sampling-spectra-with-pysynphot/">looking for an answer to the same problem</a>, so I decided to write and publish SpectRes, a Python function for spectral resampling.</p>
 </p>
 
 <p>
@@ -24,4 +19,3 @@ The code can be installed using pip with "pip install spectres", you can also cl
 <p>
 The most important thing to remember about using the code is that if you're resampling in such a way that there's a contribution to the fluxes at two of your new wavelength points from the same original flux value then those two wavelength points are now corellated with each other. The code doesn't currently return the covariance matrix for the new fluxes, but I'm happy to add this if it would be a useful feature. The best way to avoid introducing corellated noise into your flux values is to make sure that each of the original fluxes only contributes to one of your new fluxes (effectively binning the data by an integer factor).
 </p>
-

@@ -8,3 +8,10 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.synctex.gz
